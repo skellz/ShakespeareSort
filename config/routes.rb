@@ -1,5 +1,8 @@
 Groupize::Application.routes.draw do
   resource :speakers
+  get 'uploads', to: 'uploads#index'
+  get 'uploadFile', to: 'uploads#uploadFile'
+  post 'uploadFile', to: 'uploads#uploadFile'
   root 'speakers#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
