@@ -5,7 +5,9 @@ class SpeakersController < ApplicationController
 
  def new
  	@speaker = Speaker.new
- 	file = params[:speaker][:play]
- 	File.open()
+  if @speaker.save
+   	file = params[:file]
+   	file_content = File.open(file)
+  end
  end
 end

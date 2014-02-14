@@ -11,13 +11,13 @@ class Speaker < ActiveRecord::Base
     through: :speeches
 
   def longest_speech
-    speeches.order(lines_count: :desc).first
+    speeches.where('lines_count > ?',0).order(lines_count: :desc).first
   end
 
   def scene_percent
     total_scenes = Scene.all.count
     scenes_appeared_in = scenes.count
     percent = scenes_appeared_in.to_f/total_scenes.to_f
-    percent_per_speaker = (percent * 100).round.to_s + '%'
+    percent_per_speaker = (percent * 100).round
   end
 end

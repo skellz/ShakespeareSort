@@ -34,6 +34,7 @@ end
 
 gem 'jquery-datatables-rails'
 gem 'nokogiri'
+gem 'httparty'
 
 group :test, :development do 
 	gem 'rspec'
