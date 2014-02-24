@@ -1,0 +1,7 @@
+<h1>File Upload</h1>
+<div>
+  <%= simple_form_for @data, html:{multipart: true} do |f| %>
+    <%= f.input :file, as: :file %>
+    <%= f.submit %>
+  <% end %>
+</div>

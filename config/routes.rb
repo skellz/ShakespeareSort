@@ -1,5 +1,4 @@
 Groupize::Application.routes.draw do
-  resource :speakers
   get 'uploads', to: 'uploads#index'
   get 'uploadFile', to: 'uploads#uploadFile'
   post 'uploadFile', to: 'uploads#uploadFile'

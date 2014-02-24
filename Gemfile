@@ -37,11 +37,12 @@ gem 'nokogiri'
 gem 'httparty'
 
 group :test, :development do 
-	gem 'rspec'
+	gem 'rspec-rails'
 	gem 'pry-rails'
 	gem 'shoulda-matchers'
 	gem 'valid_attribute'
 	gem 'launchy'
+  gem 'capybara'
 end
 
 # Use ActiveModel has_secure_password
