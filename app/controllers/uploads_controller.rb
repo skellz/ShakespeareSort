@@ -2,7 +2,6 @@ class UploadsController < ApplicationController
   def index
   end
   def uploadFile
-    binding.pry
     if params[:upload] == nil
       flash[:notice] = "Please select a file"
       redirect_to uploads_path
